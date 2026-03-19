@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title and description are overridden by JS once the contact string is decoded -->
+  <title>Add Contact — Harbor</title>
+  <meta name="description" content="Add a contact on Harbor, the decentralized P2P chat app." />
+
+  <!-- OG tags — JS will update og:title dynamically for clients that run JS.
+       Static crawlers (which don't run JS) will see this generic fallback. -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Someone wants to connect with you on Harbor" />
+  <meta property="og:description" content="Click to add them as a contact in Harbor, the free decentralized chat app." />
+  <meta property="og:image"       content="https://social-harbor.com/assets/og-card.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="../assets/harbor-icon-dark-alpha.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- ── State A: Valid contact string ────────────────────── -->
+  <div class="add-friend-page hidden" id="state-valid">
+
+    <img src="../assets/harbor-logo-dark-alpha.png" alt="Harbor" class="add-friend-logo" />
+
+    <div class="add-friend-card">
+      <h1>
+        <span class="contact-name" id="contact-name">Someone</span>
+        wants to connect with you on Harbor
+      </h1>
+
+      <p class="peer-id" id="peer-id"></p>
+
+      <div class="add-friend-actions">
+        <button class="btn btn-primary btn-lg" id="open-in-harbor">
+          Open in Harbor
+        </button>
+      </div>
+
+      <!-- Shown after 3s if the app didn't open -->
+      <div class="fallback-message" id="fallback-message">
+        Couldn't open Harbor. You may need to install it first.
+        <br />
+        <a href="https://social-harbor.com/#download">Download Harbor →</a>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="no-harbor-section">
+        <h3>Don't have Harbor yet?</h3>
+        <div class="mini-downloads">
+          <a href="https://github.com/bakobiibizo/harbor/releases/latest" target="_blank" rel="noopener" class="mini-download-btn" id="dl-windows">
+            <i data-lucide="monitor"></i> Windows
+          </a>
+          <a href="https://github.com/bakobiibizo/harbor/releases/latest" target="_blank" rel="noopener" class="mini-download-btn" id="dl-macos">
+            <i data-lucide="apple"></i> macOS
+          </a>
+          <a href="https://github.com/bakobiibizo/harbor/releases/latest" target="_blank" rel="noopener" class="mini-download-btn" id="dl-linux">
+            <i data-lucide="terminal"></i> Linux
+          </a>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--harbor-text-muted);">
+          Harbor is free, open-source, and your data stays on your device.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── State B: Invalid or missing contact string ───────── -->
+  <div class="add-friend-page hidden" id="state-invalid">
+
+    <img src="../assets/harbor-logo-dark-alpha.png" alt="Harbor" class="add-friend-logo" />
+
+    <div class="invalid-card">
+      <div class="invalid-icon"><i data-lucide="alert-triangle"></i></div>
+      <h1>This link appears to be invalid or expired.</h1>
+      <p>The contact link you followed could not be decoded. It may be incomplete or corrupted.</p>
+      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <a href="https://social-harbor.com/#download" class="btn btn-primary">Download Harbor</a>
+        <a href="https://social-harbor.com/" class="btn btn-secondary">Go to Harbor homepage</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>lucide.createIcons();</script>
+  <script src="../js/add-friend.js"></script>
+
+</body>
+</html>

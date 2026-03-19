@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harbor — Decentralized P2P Chat</title>
+  <meta name="description" content="Harbor is a free, open-source, decentralized chat app. Your data stays on your device. No servers, no tracking." />
+
+  <!-- OG / Social preview -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://social-harbor.com/" />
+  <meta property="og:title"       content="Harbor — Decentralized P2P Chat" />
+  <meta property="og:description" content="A free, open-source chat app where your data stays on your device. No servers, no tracking." />
+  <meta property="og:image"       content="https://social-harbor.com/assets/og-card.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="assets/harbor-icon-dark-alpha.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/harbor-icon-dark-alpha.png" alt="Harbor" class="site-logo" />
+      <nav class="site-nav">
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+        <a href="https://github.com/bakobiibizo/harbor" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── Hero ────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="container">
+        <img src="assets/harbor-logo-dark-alpha.png" alt="Harbor" class="hero-logo" />
+        <p class="display hero-tagline">
+          Chat freely.<br />
+          <span class="accent">No servers. No surveillance.</span>
+        </p>
+        <p class="hero-description">
+          Harbor is a free, open-source, peer-to-peer chat app.
+          Your messages and data stay on your device —
+          no company can read them, sell them, or take them away.
+        </p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg">Download Harbor</a>
+          <a href="https://github.com/bakobiibizo/harbor" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Features ─────────────────────────────────────────── -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="features-grid">
+
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="lock"></i></div>
+            <h3>End-to-End Encrypted</h3>
+            <p>Every message is encrypted using Ed25519 and X25519 keys that never leave your device. Only you and your contact can read your conversations.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="server-off"></i></div>
+            <h3>No Central Servers</h3>
+            <p>Harbor connects peers directly using libp2p. There is no company server routing your messages — the network belongs to its users.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="hard-drive"></i></div>
+            <h3>Local-First</h3>
+            <p>Your data is stored on your own machine in a local SQLite database. You own your history, your contacts, and your identity.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="github"></i></div>
+            <h3>Free & Open Source</h3>
+            <p>Harbor is fully open source. Inspect the code, contribute, or fork it. No subscriptions, no ads, no freemium limits.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="monitor"></i></div>
+            <h3>Desktop Native</h3>
+            <p>Built with Tauri, Harbor runs as a lightweight native app on Windows, macOS, and Linux — not a browser tab dressed up as an app.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="share-2"></i></div>
+            <h3>Easy Contact Sharing</h3>
+            <p>Share a simple link to add contacts. No account creation, no phone number required — just send the link and connect.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Download ─────────────────────────────────────────── -->
+    <section class="downloads" id="download">
+      <div class="container">
+        <h2>Download Harbor</h2>
+        <p class="subtitle">Free for Windows, macOS, and Linux.</p>
+        <div class="download-buttons">
+          <a href="https://github.com/bakobiibizo/harbor/releases/latest" target="_blank" rel="noopener" class="download-btn" id="dl-windows">
+            <span class="platform-icon"><i data-lucide="monitor"></i></span>
+            <span class="platform-name">Windows</span>
+            <span class="platform-note">.msi installer</span>
+          </a>
+          <a href="https://github.com/bakobiibizo/harbor/releases/latest" target="_blank" rel="noopener" class="download-btn" id="dl-macos">
+            <span class="platform-icon"><i data-lucide="apple"></i></span>
+            <span class="platform-name">macOS</span>
+            <span class="platform-note">.dmg installer</span>
+          </a>
+          <a href="https://github.com/bakobiibizo/harbor/releases/latest" target="_blank" rel="noopener" class="download-btn" id="dl-linux">
+            <span class="platform-icon"><i data-lucide="terminal"></i></span>
+            <span class="platform-name">Linux</span>
+            <span class="platform-note">.AppImage</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-copy">© 2026 Hydra Dynamix Inc. — Harbor is open source.</span>
+      <nav class="footer-links">
+        <a href="https://github.com/bakobiibizo/harbor" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/bakobiibizo/harbor/blob/main/README.md" target="_blank" rel="noopener">Docs</a>
+        <a href="/privacy" >Privacy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Highlight the download button that matches the user's OS
+    const ua = navigator.userAgent;
+    if (/Win/i.test(ua))        document.getElementById('dl-windows')?.classList.add('highlighted');
+    else if (/Mac/i.test(ua))   document.getElementById('dl-macos')?.classList.add('highlighted');
+    else if (/Linux/i.test(ua)) document.getElementById('dl-linux')?.classList.add('highlighted');
+  </script>
+
+</body>
+</html>
